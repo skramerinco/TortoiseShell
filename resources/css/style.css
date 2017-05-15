@@ -1,0 +1,228 @@
+html, body {
+  font-size: 18px;
+}
+
+body {
+  margin:0;
+	padding:0;
+  font-family: Helvetica;
+  line-height: 1.4rem;
+}
+
+/* HEADER */
+header {
+  background-image: url('../images/glasses-bg.png');
+	background-size: cover;
+	background-position: center;
+	height: 29rem;
+	padding-top: 1rem;
+}
+
+header img {
+  height: 1.5rem;
+  padding-right: 1rem;
+  padding-left: 2rem;
+}
+
+header span{
+  font-family: Helvetica;
+  font-size: 1rem;
+  color: white;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  background-color: cadetblue;
+  color: white;
+  width: 960px;
+  margin: 0 auto;
+}
+
+nav .flex-container{
+  display: flex;
+  align-items: center;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav li {
+  display: inline-flex;
+  padding: 1rem 2rem;
+}
+
+header nav ul.sandwich {
+  display: none;
+}
+
+.hero-flex {
+  width: 960px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-text {
+  background-color: white;
+  line-height: 1.2rem;
+  padding: 1.5rem 5rem;
+  margin-top: 10rem;
+  margin-right: -2rem;
+}
+
+/* first breakpoint- where the document becomes too big to fit on the screen,
+because the main divs has a fixed width of 960px */
+@media only screen and (max-width: 960px) {
+  header {
+    height: 22rem;
+    padding-top: 0;
+  }
+  header nav {
+    width: 100%;
+  }
+  .hero-flex {
+    width: 100%;
+  }
+  .hero-text {
+    padding: 0.75rem 4rem;
+    margin-top: 5rem;
+    margin-right: 2rem;
+  }
+  .hero-text h1 {
+    font-size: 1.33rem;
+  }
+}
+
+@media only screen and (max-width: 879px){
+  header nav ul {
+    display: none;
+  }
+  header nav ul.sandwich {
+    display:  block;
+  }
+}
+
+@media only screen and (max-width: 517px){
+  header {
+    height: 17rem;
+  }
+
+  header nav h1 {
+    display: none;
+  }
+  .hero-text {
+    margin: 0;
+    padding: 0;
+    margin-top: 7rem;
+    width: 100%;
+
+  }
+
+}
+
+/* Content */
+.content .flex-container {
+  width: 960px;
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+}
+
+.content .item {
+  width: 5rem;
+  margin: 3rem;
+  text-align: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content .item img {
+  display: block;
+}
+
+.content .info {
+  margin: 0 2.5rem;
+  margin-bottom: 5rem;
+  width: 35%;
+}
+
+h2 {
+  background-color: cadetblue;
+  width: 10rem;
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  padding-left: 1.25rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+@media only screen and (max-width: 960px) {
+  .content {
+    width: 100%;
+  }
+  .content .flex-container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 517px){
+  .content .flex-container {
+    flex-flow: column nowrap;
+    align-items: center;
+    margin: 2.23rem 0;
+  }
+  .content .item{
+    margin: 1.54rem 0;
+  }
+  .content .info {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .content .info p {
+    padding: 1rem;
+  }
+  .content .info h2 {
+    width: 100%;
+    padding: 0.5rem 0;
+    padding: 0;
+    text-align: center;
+  }
+}
+
+/* Footer */
+footer {
+  background-color: azure;
+  width: 960px;
+  margin: 0 auto;
+  padding: 4rem;
+  /* to veertically align items */
+  display: flex;
+  align-items: center;
+}
+
+footer img {
+  height: 1.5rem;
+  margin-right: 1rem;
+}
+
+@media only screen and (max-width: 960px) {
+  footer {
+    width: calc(100% - 8rem);
+  }
+}
+
+@media only screen and (max-width: 517px) {
+  footer span {
+    display: none;
+  }
+  footer {
+    justify-content: center;
+  }
+}
